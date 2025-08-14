@@ -1,0 +1,72 @@
+*{
+    padding: 0;
+    /*separar el elemento del exterior*/
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+section {   
+    display: flex;
+
+    /* los elementos se ajustan a una 
+    nueva línea cuando no caben en la línea actua*/
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px; 
+}
+
+/* Recuadros genéricos */
+.cuadro {
+    background-color: #f9f9f9;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    /*aumentar el espaciado interno*/
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+
+
+/*---no usado---*/
+/* Perfil y Formación Técnica: mitad de ancho cada uno */
+.cuadro-mitad {
+    /*Sí, se ponen en horizontal (por defecto flex-direction: row).
+    Sí, ocupan todo el espacio disponible, repartiéndolo de forma
+    proporcional entre los elementos que tienen flex: 1.*/
+    flex: 1;
+    /* Ancho mínimo para que no se achique demasiado 
+    Significa: "Este bloque nunca tendrá menos de 250 píxeles de ancho"*/
+    min-width: 250px;
+}
+/*---no usado---*/
+
+
+
+/* Habilidades: ocupa ancho completo */
+.cuadro-grande {
+    /*
+    Ocupen toda la fila 
+    Se coloquen automáticamente en su propia línea 
+    aunque haya otros elementos al lado*/
+    flex-basis: 100%;
+}
+
+.cuadro-contacto{
+    flex-basis: 100%;
+    background-color: #eef6ff;
+    border-color: #99c2ff;
+}
+
+.cuadro h2{
+    /* Coloca icono y texto en fila */
+    display: flex;          
+    /* Centra horizontalmente */
+    justify-content: center;
+    /* Centra verticalmente */
+    align-items: center; 
+    /* Espacio entre icono y texto */
+    gap: 10px;
+    /* Tamaño de texto  1rem equivale a 16px.*/
+    font-size: 2rem;       
+
+}
